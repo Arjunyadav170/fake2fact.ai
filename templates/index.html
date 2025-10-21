@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake2Fact</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <div class="web_basic_info">
+        <div class="first_icon">
+            <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <circle cx="11" cy="11" r="8" fill="none" stroke="currentColor" stroke-width="2" />
+                <line x1="20" y1="20" x2="16.65" y2="16.65" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" />
+            </svg>
+            <h1 class="project_name">Fake2fact</h1>
+        </div>
+        <div class="button_of_website">
+            <a href="{{ url_for('about') }}">
+                <button class="about_button">about</button>
+            </a>
+            <button class="sing_in_button">sing_in</button>
+        </div>
+    </div>
+    <div class="user_input_andMore">
+        <div class="web_more_info">
+            <h2 class="more_info_first">Verify Any Claim Here</h2>
+            <p>Get instant fact-checks powered by AI and trusted Indian and Global source</p>
+        </div>
+        <div class="input_type_method">
+            <div class="input_desin">
+                <button class="active" data-tab="text_button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                    Text
+                </button>
+                <button data-tab="url_button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="icon">
+                        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                    </svg>
+                    URL
+                </button>
+                <button data-tab="image_button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="icon">
+                        <circle cx="12" cy="13" r="3"></circle>
+                        <path
+                            d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z">
+                        </path>
+                    </svg>
+                    Image
+
+                </button>
+                <button data-tab="audio_button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="icon">
+                        <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path>
+                        <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                        <line x1="12" x2="12" y1="19" y2="22"></line>
+                    </svg>
+                    Audio
+                </button>
+
+            </div>
+            <div id="input_area">
+                <textarea id="claim_input" rows="4" placeholder="Enter the claim you want to verify..."></textarea>
+                <div>Example: "COVID vaccines contain microchips"</div>
+            </div>
+            <div class="fact_sumbit_block">
+                <div class="sumbit_container">
+                    <button class="clear_button"> Clear</button>
+                    <button id="fact_check_button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg>
+                        Fact check
+                    </button>
+                </div>
+
+            </div>
+            <div id="result"></div>
+        </div>
+    </div>
+    
+    
+    <div class="footer_page_info">
+        <div class="inner_info">
+            <div>
+                <h4 class="fake2fact_text">Fake2Fact</h4>
+                <p class="text_info">AI-powered fact-checking for India. Verify claims instantly with trusted sources.
+                </p>
+
+            </div>
+            <div>
+                <h4 class="source_text">Source</h4>
+                <ul class="source_name">
+                    <li>Politifact.com</li>
+                    <li>Factcheck.org</li>
+                    <li>Snopes.com</li>
+                    <li>AltNews</li>
+                    <li>Google.fact.checker.API</li>
+                    <li>Boomlive.in</li>
+
+                </ul>
+
+            </div>
+            <div>
+                <h4 class="feature_text">Feature</h4>
+                <ul class="feature_name">
+                    <li>Text Verification</li>
+                    <li>Image Analysis</li>
+                    <li>Audio Analysis/factchecker</li>
+                    <li>URL/link content validition check</li>
+
+
+                </ul>
+
+            </div>
+
+
+        </div>
+        <div class="tag_line">
+            Made to fight misinformation in India and across the world ❤️ —
+            for half-truth is more dreadful than a full lie.
+
+        </div>
+
+
+
+
+    </div>
+    
+
+
+    <script src= "{{ url_for('static', filename='js/interaction.js') }}"></script>
+</body>
+
+</html>

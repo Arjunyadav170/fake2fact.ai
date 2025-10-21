@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>about page</title>
+  <link href="{{ url_for('static',filename='css/about_style.css') }}" rel="stylesheet">
+</head>
+
+<body>
+  <div>
+    <h1>About Fake2Fact</h1>
+    <p>Fake2Fact is an AI-powered fact-checking tool designed to help users quickly verify the
+      accuracy of information they come across online. Whether it’s a claim on social media,
+      a news article, or a trending rumor, Fake2Fact empowers you to separate fact from fiction
+    </p>
+    <h2>Why Fake2Fact? (Problem Statement)</h2>
+    <P>
+      Misinformation spreads faster than ever in today’s digital world.
+      False or misleading claims can influence opinions, harm public health, or create confusion.
+      Fake2Fact aims to counter this by providing users with AI-assisted verification that is fast, transparent, and
+      easy to use
+    </P>
+    <h1 class="image_headline_text">Global Overview of Misinformation: Countries ranked by prevalence of misinformation.
+    </h1>
+    <div class="image_data">
+
+      <img src="{{ url_for('static',filename='images/Statistics_country-wise_disinformation_map.jpg') }}" alt="misinformation statistic country-wise"
+        class="mis_info_map">
+      <img src="{{ url_for('static',filename='images/misinformation_top_country_wise_chart.png') }}" alt=" Top countries misinformation chart "
+        class="mis_info_chart">
+
+    </div>
+    <h2>How It Works</h2>
+    <div class="steps">
+      <div><strong>1. Input a Claim or URL:</strong> Enter a statement or paste an article link.</div>
+      <div><strong>2. Retrieve Evidence:</strong> Our system searches reliable sources and fact-checking databases.
+      </div>
+      <div><strong>3. Analyze with AI:</strong> A large language model (LLM) processes the claim, compares it with
+        retrieved evidence, and provides an explanation.</div>
+      <div><strong>4. Get a Verdict:</strong> Results are shown as True, False, or Misleading with confidence scores.
+      </div>
+    </div>
+    <div>
+      <div class="features">
+        <h3>Key Features</h3>
+        <li>Text-based claim verification
+        <li>
+        <li>URL verification for online articles
+        <li>
+
+      </div>
+      <li>🚧 Image & Audio verification (coming soon)
+      <li>
+      <li>📊 Confidence score with explanation
+      <li>
+    </div>
+    <div>
+      <h3>Disclaimer</h3>
+      <P class="disclaimer">
+        Fake2Fact uses AI and external data sources to assist in fact-checking.
+        While it provides useful insights, it may not always be 100% accurate.
+        Users are encouraged to consult official fact-checking organizations for final confirmation.
+      </P>
+
+    </div>
+
+
+  </div>
+</body>
+
+</html>
