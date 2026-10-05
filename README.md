@@ -88,11 +88,11 @@ fake2fact.ai
 └── Documentation
     └── README.md
 
-
+```
 
 ##  System Architecture
-
 ```text
+
                     ┌─────────────────────┐
                     │       User          │
                     │   Enters a Claim    │
