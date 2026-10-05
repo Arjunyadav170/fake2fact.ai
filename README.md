@@ -21,26 +21,26 @@ The main goal is to combine **semantic retrieval + external evidence + LLM gener
 
 ---
 
-## ✨ Key Features
+##  Key Features
 
-- 🧠 **Semantic Search**
+-  **Semantic Search**
   - Converts user claims into vector embeddings.
   - Finds semantically similar fact-checking/news articles.
 
-- 🔎 **Vector Database**
+-  **Vector Database**
   - Uses PostgreSQL with `pgvector`.
   - Performs similarity search using vector distance.
 
-- 🤖 **LLM-Powered Explanation**
+-  **LLM-Powered Explanation**
   - Uses Google Gemini to generate explanations from retrieved evidence.
 
-- 📰 **Article Extraction**
+-  **Article Extraction**
   - Uses `newspaper3k` to extract article content from URLs.
 
 - 🔗 **Evidence-Based Responses**
   - Retrieves relevant articles before generating the final response.
 
-- 🌐 **Web Application**
+-  **Web Application**
   - Built using Flask.
   - Provides a simple interface for submitting claims.
 
@@ -52,7 +52,7 @@ The main goal is to combine **semantic retrieval + external evidence + LLM gener
 
 ---
 
-# 🏗️ System Architecture
+#  System Architecture
 
 ```text
                     ┌─────────────────────┐
