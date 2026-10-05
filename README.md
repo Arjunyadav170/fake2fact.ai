@@ -87,9 +87,10 @@ fake2fact.ai
 │
 └── Documentation
     └── README.md
----
 
-#  System Architecture
+
+
+##  System Architecture
 
 ```text
                     ┌─────────────────────┐
