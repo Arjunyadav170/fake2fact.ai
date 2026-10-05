@@ -50,6 +50,43 @@ The main goal is to combine **semantic retrieval + external evidence + LLM gener
 - 📊 **Similarity Scores**
   - Returns similarity information for retrieved articles.
 
+## Application File System Architecture
+
+```text
+fake2fact.ai
+│
+├── Presentation Layer
+│   ├── templates/
+│   │   ├── index.html
+│   │   └── about.html
+│   │
+│   └── static/
+│       ├── css/
+│       │   └── style.css
+│       ├── js/
+│       │   └── interaction.js
+│       └── images/
+│
+├── Application Layer
+│   └── app.py
+│       ├── Flask Routes
+│       ├── Request Handling
+│       ├── Query Embedding
+│       ├── Semantic Search
+│       ├── Article Extraction
+│       └── Gemini LLM Integration
+│
+├── Data Layer
+│   ├── data_preprocessing&vector_database_format.py
+│   ├── vector_database_create.py
+│   └── full_article_store_in_postgres.py
+│
+├── Configuration
+│   ├── requirements.txt
+│   └── .gitignore
+│
+└── Documentation
+    └── README.md
 ---
 
 #  System Architecture
